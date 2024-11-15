@@ -28,4 +28,12 @@ Utvärdering: Utöka input data och visa beräkningstiden för varje vald algori
 - **View**: 
 
   WPF-gränssnittet som visar rutter i en lista och låter användaren välja en sorteringsmetod.
+
+# Mina anteckningar
+
+ **24-11-15**
+ 
+ Har skapat Listview, testat att läsa in rutter.  
+ Har skapat skelett för Graph och Route modeller.
+  
   
