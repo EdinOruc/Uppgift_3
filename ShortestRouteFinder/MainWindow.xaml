@@ -8,7 +8,7 @@
     </Window.DataContext>
 
     <StackPanel Margin="10">
-        <TextBlock Text="Rutter:" FontWeight="Bold" Margin="0,0,0,10"/>
+        <TextBlock Text="Routes:" FontWeight="Bold" Margin="0,0,0,10"/>
 
         <ListView ItemsSource="{Binding Routes}" SelectedItem="{Binding SelectedRoute}" Margin="0,0,0,10">
             <ListView.View>

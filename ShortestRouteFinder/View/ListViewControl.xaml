@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <DataGrid ItemsSource="{Binding Routes}" AutoGenerateColumns="False" Margin="10" IsReadOnly="False">
+        <DataGrid ItemsSource="{Binding Routes}" AutoGenerateColumns="False" Margin="10" IsReadOnly="False" SelectionChanged="DataGrid_SelectionChanged">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Start" Binding="{Binding Start, Mode=TwoWay}" />
                 <DataGridTextColumn Header="Destination" Binding="{Binding Destination.Name}" />

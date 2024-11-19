@@ -37,6 +37,25 @@ namespace ShortestRouteFinder.ViewModel
             return JsonConvert.DeserializeObject<List<Route>>(json);
         }
 
+        private List<Route> SortRoutes(List<Route> UnsortedRoutes)
+        {
+       
+            for (int i = 0; i < UnsortedRoutes.Count - 1; i++)
+            {
+                for (int j = 0; j < UnsortedRoutes.Count - i - 1; j++)
+                {
+                    if (UnsortedRoutes[j].Distance > UnsortedRoutes[j + 1].Distance)
+                    {
+                        // Swap the elements
+                        Route tempRoute = UnsortedRoutes[j];
+                        UnsortedRoutes[j] = UnsortedRoutes[j + 1];
+                        UnsortedRoutes[j + 1] = tempRoute;
+                    }
+                }
+            }
+            return UnsortedRoutes;
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
         protected virtual void OnPropertyChanged(string propertyName) =>
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
