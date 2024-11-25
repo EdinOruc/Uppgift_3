@@ -34,7 +34,7 @@ namespace ShortestRouteFinder.ViewModel
         private List<Route> LoadRoutes()
         {
             var json = File.ReadAllText("routes.json");
-            return JsonConvert.DeserializeObject<List<Route>>(json);
+            return this.SortRoutes(JsonConvert.DeserializeObject<List<Route>>(json));
         }
 
         private List<Route> SortRoutes(List<Route> UnsortedRoutes)
